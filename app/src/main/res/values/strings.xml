@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">QR-Barcode Scanner</string>
+    <string name="about_title">About</string>
+    <string name="about_back_content_description">Back</string>
+    <string name="about_logo_content_description">Logo</string>
+    <string name="about_logo_text">Logo.in</string>
+    <string name="about_we_are_simplified">We are\nSimplified</string>
+    <string name="about_we_make_apps_that_count">We make apps that count</string>
+    <string name="about_description">We make apps without ads or premium plans,\nwe just need you to support us only</string>
+    <string name="about_buy_coffee_button">Buy us a Coffee</string>
+</resources>

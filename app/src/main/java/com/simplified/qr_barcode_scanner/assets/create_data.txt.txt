@@ -1,0 +1,33 @@
+SCREEN TITLE: Create (with Back Arrow Icon)
+
+
+
+
+SECTION 1: PRESET
+
+1.  clipboard
+2.  URL
+3.  Text
+4.  Contact
+5.  Mail
+6.  SMS
+7.  Location
+8.  calendar
+9.  Wifi
+10. My QR
+11. Custom
+
+SECTION 2: BARCODES
+
+12. EAN_8
+13. EAN_13
+14. UPC_E
+15. UPC_A
+16. CODE_39
+17. CODE_93
+18. CODE_128
+19. ITF
+20. PDF_417
+21. CODABAR
+22. DATA_MATRIX
+23. AZTEC

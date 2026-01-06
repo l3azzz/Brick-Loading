@@ -1,0 +1,77 @@
+app/src/main/java/com/atif/qrscanner/
+├── data/                                   // DATA LAYER: Database & Preferences
+│   ├── local/
+│   │   ├── AppDatabase.kt                  // Room Database instance
+│   │   ├── dao/
+│   │   │   └── ScanDao.kt                  // Database access for History/Favorites
+│   │   └── entity/
+│   │       └── ScanResultEntity.kt         // Model for saved QR codes
+│   ├── repository/
+│   │   └── ScanRepository.kt               // Single source of truth for data
+│   └── preferences/
+│       └── AppPreferences.kt               // DataStore for Settings (Theme, Beep, etc)
+│
+├── di/                                     // DEPENDENCY INJECTION (Hilt/Koin)
+│   └── AppModule.kt                        // Provides Database, Repository, MLKit instances
+│
+├── utils/                                  // HELPER CLASSES
+│   ├── Constants.kt
+│   ├── PermissionsHelper.kt                // Camera permission logic
+│   ├── Extensions.kt
+│   ├── analyzer/                           // ML KIT PACKAGE
+│   │   └── MLKitBarcodeAnalyzer.kt         // Logic to process camera frames
+│   └── generator/                          // QR GENERATOR PACKAGE
+│       └── QRCodeGenerator.kt              // Logic to create bitmaps from text
+│
+├── ui/                                     // PRESENTATION LAYER (Screens)
+│   ├── theme/                              // App Theme (Colors, Type)
+│   │   ├── Color.kt
+│   │   └── Theme.kt
+│   │
+│   ├── components/                         // Reusable UI Widgets
+│   │   ├── TopBar.kt
+│   │   ├── CustomButton.kt
+│   │   └── ZoomControls.kt
+│   │
+│   ├── navigation/                         // Navigation Graph
+│   │   └── AppNavigation.kt                // Routes for all 11 screens
+│   │
+│   ├── splash/                             // SCREEN 1
+│   │   └── SplashScreen.kt
+│   │
+│   ├── onboarding/                         // SCREEN 2
+│   │   ├── WelcomeScreen.kt
+│   │   └── OnboardingViewModel.kt
+│   │
+│   ├── camera/                             // SCREEN 3 (HOME)
+│   │   ├── MainCameraScreen.kt
+│   │   ├── CameraOverlay.kt
+│   │   └── CameraViewModel.kt
+│   │
+│   ├── result/                             // SCREEN 5 & 6
+│   │   ├── ScannedResultScreen.kt          // The 3-Pane Detail View
+│   │   ├── OopsErrorScreen.kt              // SCREEN 6 (Error State)
+│   │   └── ResultViewModel.kt
+│   │
+│   ├── create/                             // SCREEN 7
+│   │   ├── CreateMenuScreen.kt             // List of types
+│   │   ├── CreateInputScreen.kt            // The editor input
+│   │   └── CreateViewModel.kt
+│   │
+│   ├── history/                            // SCREEN 9
+│   │   ├── HistoryScreen.kt
+│   │   └── HistoryViewModel.kt
+│   │
+│   ├── favorites/                          // SCREEN 8
+│   │   ├── FavoritesScreen.kt
+│   │   └── FavoritesViewModel.kt
+│   │
+│   ├── settings/                           // SCREEN 4 & 11
+│   │   ├── SettingsScreen.kt
+│   │   ├── AboutScreen.kt                  // SCREEN 11
+│   │   └── SettingsViewModel.kt
+│   │
+│   └── donation/                           // SCREEN 10
+│       └── BuyMeCoffeeScreen.kt
+│
+└── MyApp.kt                                // Application Class
